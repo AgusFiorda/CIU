@@ -1,0 +1,25 @@
+body {
+  background-color: lightgrey;
+}
+
+h1 {
+  color: blue
+}
+
+h2 {
+  color: #ba52f1
+}
+
+h3 {
+  color: rgb(120, 33, 44)
+}
+
+p {
+  color: red;
+  background-color: green
+}
+
+img {
+  height: 100px;
+  width: 100px
+}
