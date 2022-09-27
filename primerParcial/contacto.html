@@ -29,7 +29,58 @@
       </div>
     </div>
   </header>
-
+  <div class="p-10 bg-cover bg-[url('./assets/burgerPrincipal.jpg')] text-3xl text-white font-semibold px-32">
+    <h1
+      class="text-center mt-4 text-5xl font-mono text-yellow-500 decoration-solid decoration-yellow-500 underline uppercase font-bold mb-4">
+      Contactenos
+    </h1>
+    <form
+      class="border-2 border-yellow-400 p-4 mx-12 backdrop-opacity-30 backdrop-invert bg-gray-400/30 px-12 py-12 mt-10 rounded-lg">
+      <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="relative z-0 mb-6 w-full ">
+          <input type="text"
+            class="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+            placeholder=" " />
+          <label
+            class="peer-focus:font-medium  absolute  text-black text-lg duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre</label>
+        </div>
+        <div class="relative z-0 mb-6 w-full group">
+          <input type="text" name="floating_last_name" id="floating_last_name"
+            class="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+            placeholder=" " />
+          <label
+            class="peer-focus:font-medium  absolute  text-black text-lg duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Apellido</label>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 md:gap-6">
+        <div class="relative z-0 mb-6 w-full group">
+          <input type="text"
+            class="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+            placeholder=" " />
+          <label
+            class="peer-focus:font-medium  absolute  text-black text-lg duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email
+          </label>
+        </div>
+        <div class="relative z-0 mb-6 w-full group">
+          <input type="tel"
+            class="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+            placeholder=" " />
+          <label
+            class="peer-focus:font-medium  absolute  text-black text-lg duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Número
+            de teléfono</label>
+        </div>
+      </div>
+      <div class="relative z-0 mb-6 w-full group">
+        <input type="text"
+          class="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-black appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+          placeholder=" " />
+        <label
+          class="peer-focus:font-medium  absolute  text-black text-lg duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white  peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Mensaje</label>
+      </div>
+      <button type="submit" onclick="Alerta()"
+        class="text-yellow-500 border-2 border-yellow-500 text-xl hover:bg-yellow-500 hover:text-black px-6 py-2 rounded-md ">Enviar</button>
+    </form>
+  </div>
   <footer class="bg-gray-800 text-white p-10 font-semibold">
 
     <div class="flex flex-row justify-between">
@@ -50,36 +101,42 @@
       </div>
       <div>
         <h1>Hacenos tu pedido</h1>
-        <img src="./assets/pedidos.png" alt="Pedidos ya" class="w-10 h-10 rounded-full m-2">
-
+        <a target="_blank" href="https://www.pedidosya.com.ar/"><img src="./assets/pedidos.png" alt="Pedidos ya"
+            class="w-10 h-10 rounded-full m-2"></a>
       </div>
       <div>
         <h1 class="text-center">Seguinos en:</h1>
         <section class="flex flex-row">
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-instagram border-2 rounded-full p-1 m-2 border-yellow-400"
-            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <rect x="4" y="4" width="16" height="16" rx="4" />
-            <circle cx="12" cy="12" r="3" />
-            <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-twitter border-2 rounded-full p-1 m-2 border-yellow-400"
-            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path
-              d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-brand-facebook border-2 rounded-full p-1 m-2 border-yellow-400"
-            width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
-          </svg>
+          <a href="https://www.instagram.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-instagram border-2 rounded-full p-1 m-2 border-yellow-400"
+              width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <rect x="4" y="4" width="16" height="16" rx="4" />
+              <circle cx="12" cy="12" r="3" />
+              <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+            </svg>
+          </a>
+          <a href="https://twitter.com/?lang=es" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-twitter border-2 rounded-full p-1 m-2 border-yellow-400"
+              width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-facebook border-2 rounded-full p-1 m-2 border-yellow-400"
+              width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+            </svg>
+          </a>
         </section>
       </div>
       <div>
@@ -91,7 +148,11 @@
       </div>
     </div>
   </footer>
-
+  <script>
+    const Alerta = () => {
+      window.alert("Mensaje Enviado con exito")
+    }
+  </script>
 </body>
 
 </html>
