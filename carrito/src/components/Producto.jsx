@@ -1,20 +1,27 @@
-import { React, useState } from "react";
+import { createFactory } from "react";
+import { React } from "react";
 
 const Producto = ({ producto, productos, changuito, agregarProducto }) => {
   //extraemos los valores de producto
   const { id, articulo, precio } = producto;
 
   //funcion para comprar un producto
-  const seleccionarProducto = (id) => {
+  const seleccionarProducto = (id, unico) => {
+    console.log("changuito 1:", changuito);
+
     const producto = productos.filter((producto) => producto.id === id)[0];
     //agregamos los ... para que la lista no se sobreescriba y se guarde al final
+
     agregarProducto([...changuito, producto]);
-    console.log(changuito);
+    console.log("changuito seleccionarProducto:", changuito);
   };
 
   //funcion para eliminar un producto
-  const eliminarProducto = (id) => {
-    console.log(id);
+  const eliminarProd = (id) => {
+    console.log("key: ", id);
+    const prod = changuito.filter((prod) => prod.id !== id);
+    //sacamos los socios que se borraron de la lista y se agregan los socios que quedaron
+    agregarProducto(prod);
   };
 
   return (
@@ -26,8 +33,8 @@ const Producto = ({ producto, productos, changuito, agregarProducto }) => {
           Comprar
         </button>
       ) : (
-        <button type="button" onClick={() => eliminarProducto(id)}>
-          Eliminar
+        <button type="button" onClick={() => eliminarProd(id)}>
+          Comprar
         </button>
       )}
       <br />

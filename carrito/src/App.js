@@ -30,7 +30,10 @@ function App() {
           agregarProducto={agregarProducto}
         ></Producto>
       ))}
-      <Changuito changuito={changuito}></Changuito>
+      <Changuito
+        changuito={changuito}
+        agregarProducto={agregarProducto}
+      ></Changuito>
       <Footer></Footer>
     </>
   );
