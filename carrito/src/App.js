@@ -22,10 +22,10 @@ function App() {
 
   //creamos una lista de productos
   const [productos, guardarProductos] = useState([
-    { id: 0, articulo: "Guitarra", precio: 80000 },
-    { id: 1, articulo: "Bateria", precio: 150000 },
-    { id: 2, articulo: "Microfono", precio: 30000 },
-    { id: 3, articulo: "Flauta", precio: 10000 },
+    { id: 0, articulo: "Guitarra", precio: 80000, cantidad: 0 },
+    { id: 1, articulo: "Bateria", precio: 150000, cantidad: 0 },
+    { id: 2, articulo: "Microfono", precio: 30000, cantidad: 0 },
+    { id: 3, articulo: "Flauta", precio: 10000, cantidad: 0 },
   ]);
 
   //creamos nuestro changuito de compras
