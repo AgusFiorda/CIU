@@ -1,8 +1,9 @@
 import { React, useState, useEffect } from "react";
+import Modale from "./Modal";
 
 const Games = () => {
   const [url, editar] = useState("");
-  const [juegos, setGames] = useState([]);
+  const [games, setGames] = useState([]);
 
   const options = {
     method: "GET",
@@ -13,8 +14,8 @@ const Games = () => {
   };
 
   const agregarItems = (items) => {
-    //obtiene los 5 primeros elementos de todo el array de items que son games obtenido de la API
-    setGames(items.slice(0, 6));
+    //obtiene los 6 primeros elementos de todo el array de items que son games obtenido de la API
+    setGames(items.slice(0, 9));
   };
 
   useEffect(() => {
@@ -30,18 +31,35 @@ const Games = () => {
   }, []);
   return (
     <>
-      <div className="grid grid-rows-2 grid-flow-col gap-1 justify-items-center mt-3 py-8 px-8">
-        {juegos.map((game, index) => {
+      <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center mt-3 py-8 px-8">
+        {games.map((game, index) => {
           return (
             <>
-              <div className="flex flex-col justify-center mb-10 font-principal border-2 border-gray-400 p-4 mx-4 shadow-xl">
-                <p className="text-center pt-4 mb-4 text-2xl" key={index}>
+              <div className="shadow-lg shadow-orange-500 flex flex-col justify-center mb-10 font-principal bg-gray-800 bg-opacity-40 p-4 mx-4 shadow-xl">
+                <p
+                  className="text-center text-white pt-4 mb-4 text-2xl"
+                  key={index}
+                >
                   {game.title}
                 </p>
-                <img src={game.thumbnail} alt=""></img>
-                <button className="bg-blue-400 rounded-full mt-3 py-2 px-4 hover:bg-orange-400">
-                  Comprar
-                </button>
+                <img
+                  className="mb-4 rounded-md "
+                  src={game.thumbnail}
+                  alt=""
+                ></img>
+                <section className="flex flex-row justify-around">
+                  <Modale
+                    platform={game.platform}
+                    thumbnail={game.thumbnail}
+                    genre={game.genre}
+                    game_url={game.game_url}
+                    developer={game.developer}
+                    title={game.title}
+                  />
+                  <button className="text-white border-2 border-white rounded-lg mt-3 py-2 px-4 hover:border-orange-600 hover:text-orange-600">
+                    Comprar
+                  </button>
+                </section>
               </div>
             </>
           );

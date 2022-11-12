@@ -6,9 +6,11 @@ import Header from "./components/Header";
 function App() {
   return (
     <>
-      <Header />
-      <Games />
-      <Footer></Footer>
+      <div className="bg-[url('./assets/estrellado.jpg')]">
+        <Header />
+        <Games />
+        <Footer></Footer>
+      </div>
     </>
   );
 }

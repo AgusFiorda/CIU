@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="bg-gray-800 text-white p-10 font-semibold">
+      <footer className="bg-black bg-opacity-80 text-white p-10 font-semibold">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row">
             <AiOutlineMail className="text-yellow-400 border-2 rounded-full p-1 m-4 border-yellow-400 w-10 h-10" />

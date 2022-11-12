@@ -4,7 +4,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-gray-800 text-white p-2  font-semibold uppercase w-full flex flex-row justify-center">
+    <header className="bg-black bg-opacity-80 text-white p-2 font-semibold uppercase w-full flex flex-row justify-center">
       <a href="#"></a>
       <div className="mt-12 ml-12">
         <a
