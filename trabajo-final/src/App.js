@@ -1,8 +1,15 @@
 import "./App.css";
+import Footer from "./components/Footer";
+import Games from "./components/Games";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <h1 className="text-red-500 text-3xl font-bold underline">Hello world!</h1>
+    <>
+      <Header />
+      <Games />
+      <Footer></Footer>
+    </>
   );
 }
 
