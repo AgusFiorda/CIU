@@ -2,9 +2,24 @@ import { React, useState, useEffect } from "react";
 import Modale from "./Modal";
 
 const Games = () => {
-  const [url, editar] = useState("");
-  const [games, setGames] = useState([]);
+  let gamesApi = JSON.parse(localStorage.getItem("games"));
+  if (!gamesApi) {
+    gamesApi = [];
+  }
 
+  const [games, setGames] = useState(gamesApi);
+
+  const precios = [
+    "$ 1000",
+    "$ 500",
+    "$ 600",
+    "$ 1200",
+    "$ 900",
+    "$ 800",
+    "$ 1050",
+    "$ 700",
+    "$ 600",
+  ];
   const options = {
     method: "GET",
     headers: {
@@ -14,24 +29,28 @@ const Games = () => {
   };
 
   const agregarItems = (items) => {
-    //obtiene los 6 primeros elementos de todo el array de items que son games obtenido de la API
+    //obtiene los 9 primeros elementos de todo el array de items que son games obtenido de la API
     setGames(items.slice(0, 9));
   };
 
   useEffect(() => {
-    async function getGames() {
-      const response = await fetch(
-        "https://free-to-play-games-database.p.rapidapi.com/api/games",
-        options
-      );
-      const data = await response.json();
-      agregarItems(data);
+    if (gamesApi.length === 0) {
+      async function getGames() {
+        const response = await fetch(
+          "https://free-to-play-games-database.p.rapidapi.com/api/games",
+          options
+        );
+        const data = await response.json();
+        agregarItems(data);
+      }
+      getGames();
+      localStorage.setItem("games", JSON.stringify(games));
     }
-    getGames();
-  }, []);
+  }, [gamesApi]);
+
   return (
     <>
-      <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center mt-3 py-8 px-8">
+      <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center mt-3 py-8 px-8 pt-32">
         {games.map((game, index) => {
           return (
             <>
@@ -47,6 +66,9 @@ const Games = () => {
                   src={game.thumbnail}
                   alt=""
                 ></img>
+                <section className="text-white text-2xl text-center ">
+                  {precios[index]}
+                </section>
                 <section className="flex flex-row justify-around">
                   <Modale
                     platform={game.platform}

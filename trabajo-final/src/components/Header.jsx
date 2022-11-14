@@ -1,24 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { RiGameLine } from "react-icons/ri";
 
 const Header = () => {
   return (
-    <header className="bg-black bg-opacity-80 text-white p-2 font-semibold uppercase w-full flex flex-row justify-center">
-      <a href="#"></a>
-      <div className="mt-12 ml-12">
-        <a
-          href="#"
-          className="mt-10 hover:text-yellow-300 border-2 border-gray-800 hover:border-yellow-300 px-6 py-2 rounded-md"
-        >
-          Menu
-        </a>
-        <a
-          href=""
-          className="mt-10 hover:text-yellow-300 border-2 border-gray-800 hover:border-yellow-300 px-6 py-2 rounded-md"
-        >
-          Contacto
-        </a>
+    <header className="bg-black bg-opacity-80 text-white p-2  font-semibold uppercase w-full fixed">
+      <div className="mt-8 flex flex-row justify-center">
+        <p className="flex flex-row ">
+          <RiGameLine className="text-6xl " />{" "}
+          <span className="text-3xl mr-2">. . . </span>
+          <span className="text-3xl mt-2">Game Over</span>
+        </p>
       </div>
     </header>
   );
