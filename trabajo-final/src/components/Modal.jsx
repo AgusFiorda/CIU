@@ -16,7 +16,7 @@ const Modale = (props) => {
     <div>
       <button
         onClick={toggleModal}
-        className="text-white border-2 border-white rounded-lg mt-3 py-2 px-4 hover:border-orange-600 hover:text-orange-600"
+        className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4"
       >
         Informacion
       </button>
@@ -72,7 +72,7 @@ const Modale = (props) => {
           <div className="flex flex-row justify-around my-6">
             <button
               onClick={toggleModal}
-              className="text-white border-2 border-white rounded-lg mt-3 py-3 px-6 hover:border-orange-600 hover:text-orange-600 text-xl uppercase"
+              className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4"
             >
               Cerrar
             </button>

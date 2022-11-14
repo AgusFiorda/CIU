@@ -9,17 +9,6 @@ const Games = () => {
 
   const [games, setGames] = useState(gamesApi);
 
-  const precios = [
-    "$ 1000",
-    "$ 500",
-    "$ 600",
-    "$ 1200",
-    "$ 900",
-    "$ 800",
-    "$ 1050",
-    "$ 700",
-    "$ 600",
-  ];
   const options = {
     method: "GET",
     headers: {
@@ -50,11 +39,17 @@ const Games = () => {
 
   return (
     <>
-      <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center mt-3 py-8 px-8 pt-32">
+      <section className="text-center text-white mt-10 text-5xl pt-20 font-semibold ">
+        <p>Proximas competencias</p>
+      </section>
+      <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center py-8 px-8 pt-28">
         {games.map((game, index) => {
           return (
             <>
-              <div className="shadow-lg shadow-orange-500 flex flex-col justify-center mb-10 font-principal bg-gray-800 bg-opacity-40 p-4 mx-4 shadow-xl">
+              <div
+                className="transition duration-100 ease-in-out transform hover:-translate-y-1  border-2
+              shadow-blue-900 flex flex-col justify-center mb-10 font-principal bg-gray-800 bg-opacity-40 p-4 mx-4 shadow-lg"
+              >
                 <p
                   className="text-center text-white pt-4 mb-4 text-2xl"
                   key={index}
@@ -66,9 +61,7 @@ const Games = () => {
                   src={game.thumbnail}
                   alt=""
                 ></img>
-                <section className="text-white text-2xl text-center ">
-                  {precios[index]}
-                </section>
+
                 <section className="flex flex-row justify-around">
                   <Modale
                     platform={game.platform}
@@ -78,7 +71,7 @@ const Games = () => {
                     developer={game.developer}
                     title={game.title}
                   />
-                  <button className="text-white border-2 border-white rounded-lg mt-3 py-2 px-4 hover:border-orange-600 hover:text-orange-600">
+                  <button className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4">
                     Comprar
                   </button>
                 </section>
