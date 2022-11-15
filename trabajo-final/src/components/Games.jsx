@@ -22,6 +22,18 @@ const Games = () => {
     setGames(items.slice(0, 9));
   };
 
+  let horarios = [
+    "Horario 14:00hs - Sala 1",
+    "Horario 11:15hs - Sala 2",
+    "Horario 13:00hs - Sala 3",
+    "Horario 10:30hs - Sala 3",
+    "Horario 18:00hs - Sala 1",
+    "Horario 15:30hs - Sala 3",
+    "Horario 19:00hs - Sala 2",
+    "Horario 16:00hs - Sala 1",
+    "Horario 14:15hs - Sala 1",
+  ];
+
   useEffect(() => {
     if (gamesApi.length === 0) {
       async function getGames() {
@@ -39,15 +51,21 @@ const Games = () => {
 
   return (
     <>
-      <section className="text-center text-white mt-10 text-5xl pt-20 font-semibold ">
-        <p>Proximas competencias</p>
+      <section
+        id="games"
+        className=" text-center text-white mt-10 text-5xl pt-20 font-semibold "
+      >
+        <h1>Proximas competencias</h1>
+        <p className="text-xl mt-4">
+          Demuestra tu habilidad jugando los mejores torneos de la comunidad.
+        </p>
       </section>
       <div className="grid grid-rows-3 grid-flow-col gap-1 justify-items-center py-8 px-8 pt-28">
         {games.map((game, index) => {
           return (
             <>
               <div
-                className="transition duration-100 ease-in-out transform hover:-translate-y-1  border-2
+                className="border-2
               shadow-blue-900 flex flex-col justify-center mb-10 font-principal bg-gray-800 bg-opacity-40 p-4 mx-4 shadow-lg"
               >
                 <p
@@ -57,12 +75,12 @@ const Games = () => {
                   {game.title}
                 </p>
                 <img
-                  className="mb-4 rounded-md "
+                  className="mb-4 rounded-sm"
                   src={game.thumbnail}
-                  alt=""
+                  alt="..."
                 ></img>
-
-                <section className="flex flex-row justify-around">
+                <p className="text-white text-center">{horarios[index]}</p>
+                <section className="flex justify-around">
                   <Modale
                     platform={game.platform}
                     thumbnail={game.thumbnail}
@@ -71,9 +89,6 @@ const Games = () => {
                     developer={game.developer}
                     title={game.title}
                   />
-                  <button className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4">
-                    Comprar
-                  </button>
                 </section>
               </div>
             </>

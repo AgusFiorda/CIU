@@ -9,10 +9,10 @@ import {
 const Footer = () => {
   return (
     <>
-      <footer className="bg-black bg-opacity-80 text-white p-10 font-semibold">
+      <footer className="bg-black bg-opacity-80 text-white p-10 mt-18 font-semibold">
         <div className="flex flex-row justify-between">
           <div className="flex flex-row">
-            <AiOutlineMail className="text-yellow-400 border-2 rounded-full p-1 m-4 border-yellow-400 w-10 h-10" />
+            <AiOutlineMail className=" border-2 rounded-full p-1 m-4 border-orange-500 w-10 h-10" />
             <section className="flex flex-col">
               <h1>Escribinos a:</h1>
               <a href="mailto:info@fangames.net"> info@fangames.net</a>
@@ -27,21 +27,21 @@ const Footer = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiOutlineInstagram className="border-2 rounded-full p-1 m-2 border-yellow-400 w-10 h-10" />
+                <AiOutlineInstagram className="border-2 rounded-full p-1 m-2 border-orange-500 w-10 h-10" />
               </a>
               <a
                 href="https://twitter.com/?lang=es"
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiOutlineTwitter className="border-2 rounded-full p-1 m-2 border-yellow-400 w-10 h-10" />
+                <AiOutlineTwitter className="border-2 rounded-full p-1 m-2 border-orange-500 w-10 h-10" />
               </a>
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noreferrer"
               >
-                <AiFillFacebook className="border-2 rounded-full p-1 m-2 border-yellow-400 w-10 h-10" />
+                <AiFillFacebook className="border-2 rounded-full p-1 m-2 border-orange-500 w-10 h-10" />
               </a>
             </section>
           </div>

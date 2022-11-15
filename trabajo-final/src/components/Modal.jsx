@@ -16,7 +16,7 @@ const Modale = (props) => {
     <div>
       <button
         onClick={toggleModal}
-        className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4"
+        className="transition duration-100 ease-in-out transform hover:-translate-y-1  border-2 text-white rounded-md  mt-3 py-2 px-4"
       >
         Informacion
       </button>
@@ -26,7 +26,7 @@ const Modale = (props) => {
         contentLabel="My dialog"
         className="absolute top-0 bottom-0 left-0 right-0 flex flex-col items-center justify-center bg-opacity-60 bg-slate-800"
       >
-        <div className="flex flex-col mx-2 text-base rounded-lg w-1/2 p-10 text-white fondo shadow-lg shadow-orange-500">
+        <div className="flex flex-col mx-2 text-base rounded-lg w-2/3 p-10 text-white fondo ">
           <GrClose
             onClick={toggleModal}
             className="self-end cursor-pointer bg-white text-xl rounded-full border-2 border-white"
@@ -67,12 +67,12 @@ const Modale = (props) => {
                 <AiFillStar />
               </section>
             </section>
-            <img src={props.thumbnail} alt="cursos" className="  w-72 ml-0" />
+            <img src={props.thumbnail} alt="cursos" className="w-72 ml-0" />
           </div>
           <div className="flex flex-row justify-around my-6">
             <button
               onClick={toggleModal}
-              className="transition duration-100 ease-in-out transform hover:-translate-y-1   hover:bg-orange-600 border-2 text-white rounded-md  mt-3 py-2 px-4"
+              className="transition duration-100 ease-in-out transform hover:-translate-y-1 border-2 text-white rounded-md  mt-3 py-2 px-4"
             >
               Cerrar
             </button>

@@ -5,13 +5,27 @@ import { RiGameLine } from "react-icons/ri";
 
 const Header = () => {
   return (
-    <header className="bg-black bg-opacity-80 text-white p-2 font-semibold uppercase w-screen fixed  ">
-      <div className="mt-8 flex flex-row justify-center">
-        <p className="flex flex-row ">
+    <header className="bg-black bg-opacity-80 text-white py-6 font-semibold uppercase w-screen text-center flex flex-col">
+      <div>
+        <p className="flex flex-row justify-center">
           <RiGameLine className="text-6xl " />{" "}
           <span className="text-3xl mr-2">. . . </span>
-          <span className="text-3xl mt-2">Game Over</span>
+          <span className="text-3xl mt-2 ">Game Over</span>
         </p>
+      </div>
+      <div className="flex flex-row justify-center uppercase mt-4">
+        <a
+          className="px-4 border-x-2 mr-4 hover:text-orange-500"
+          href="#premios"
+        >
+          premios
+        </a>
+        <a className="mr-4 hover:text-orange-500" href="#games">
+          competencia{" "}
+        </a>
+        <a className="px-4 border-x-2  hover:text-orange-500" href="#nosotros">
+          sobre nosotros
+        </a>
       </div>
     </header>
   );
