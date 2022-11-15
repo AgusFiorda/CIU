@@ -1,0 +1,12 @@
+
+
+body{
+  margin: -15px;
+  padding: 0px;
+  font-family: Fragment Mono ;
+
+}
+.fondo{
+  background: rgb(2, 0, 36);
+    background: linear-gradient(0deg, rgba(2, 0, 36, 0.815) 44%, rgba(0, 0, 0, 1) 100%);
+}
